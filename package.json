@@ -10,7 +10,8 @@
     "dev": "node --env-file-if-exists=.env scripts/dev.mjs",
     "db:local": "node scripts/local-db.mjs",
     "db:migrate": "node --env-file-if-exists=.env scripts/migrate.mjs",
-    "test": "node tests/integration.mjs"
+    "test": "node tests/integration.mjs",
+    "test:delete": "node tests/delete-recap.mjs"
   },
   "dependencies": {
     "express": "^5.1.0",

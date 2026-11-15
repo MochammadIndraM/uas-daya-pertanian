@@ -43,6 +43,8 @@ Buka **http://localhost:3000** untuk peserta dan **http://localhost:3000/rekap**
 
 Kode rekap diisi pada halaman dosen. Filter golongan dan tombol CSV membaca hasil terkirim. CSV memakai UTF-8 BOM, pemisah titik koma, waktu WIB, dan perlindungan formula Excel.
 
+Tombol **Hapus** pada tiap baris rekap meminta konfirmasi nama/NIM. Setelah disetujui, nilai, jawaban, sesi, dan catatan reset pada baris itu dihapus permanen. Hanya kode dosen yang benar dapat menghapus data pada `EXAM_ID` aktif. Rekap, statistik, dan CSV dimuat ulang setelah penghapusan; data peserta lain tetap tersimpan. Tidak perlu migrasi SQL tambahan untuk fitur ini.
+
 Hentikan aplikasi dengan **Ctrl+C** di terminal kedua, lalu hentikan database dengan **Ctrl+C** di terminal pertama. Untuk menjalankan lagi, ulangi langkah 2 dan 3; data tidak dihapus. Jika port aplikasi terpakai, ubah `PORT` dalam `.env` lalu mulai lagi. PostgreSQL lokal menggunakan port 55432 dan pengujian 55433.
 
 ## 4. Menggunakan PostgreSQL yang sudah tersedia

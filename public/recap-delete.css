@@ -1,0 +1,2 @@
+.button-delete { color: #9b3428; background: #fff; border-color: #dfbbb6; min-height: 38px; padding: 7px 12px; }
+.button-delete:hover:not(:disabled) { background: #fff0ed; border-color: #9b3428; }

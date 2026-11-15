@@ -28,6 +28,7 @@ let notice = "";
 
 function display(markup) {
   view.innerHTML = markup;
+  initializePasswordToggles(view);
   view.setAttribute("aria-busy", "false");
 }
 
@@ -200,6 +201,14 @@ function showClock() {
 
 function updateProgress() {
   const answered = Object.keys(answers).length;
+  document.querySelectorAll(".question-number").forEach((button, index) => {
+    const done = Object.hasOwn(answers, questions[index].id);
+    button.classList.toggle("is-answered", done);
+    button.disabled = submitting;
+    button.setAttribute("aria-label", `Soal ${index + 1}, ${done ? "sudah dijawab" : "belum dijawab"}`);
+    if (index === position) button.setAttribute("aria-current", "step");
+    else button.removeAttribute("aria-current");
+  });
   document.querySelector("#progress-label").textContent = `${answered} dari ${questions.length} dijawab`;
   document.querySelector("#progress").value = answered;
   document.querySelector("#submit-button").disabled = answered !== questions.length || submitting;
@@ -265,6 +274,10 @@ function renderExam() {
         <h2 id="progress-title">Progres</h2>
         <p class="progress-label" id="progress-label"></p>
         <progress id="progress" max="${questions.length}" value="0" aria-label="Jumlah soal yang dijawab"></progress>
+        <nav id="question-numbers" class="question-numbers" aria-label="Navigasi nomor soal">
+          ${questions.map((item, index) => `<button class="question-number" type="button" data-index="${index}">${index + 1}</button>`).join("")}
+        </nav>
+        <p class="question-legend"><span><i class="legend-answered" aria-hidden="true"></i>Sudah dijawab</span><span><i class="legend-unanswered" aria-hidden="true"></i>Belum dijawab</span><span><i class="legend-current" aria-hidden="true"></i>Sedang dibuka</span></p>
         <button id="unanswered" class="button button-secondary review-button" type="button">Ke soal belum dijawab</button>
         <button id="submit-button" class="button button-primary submit-button" type="button">${submitting ? "Mengirim…" : "Kirim jawaban"}</button>
         <p id="submit-error" class="error" role="alert" hidden></p>
@@ -276,6 +289,10 @@ function renderExam() {
     answers[question.id] = Number(event.target.value);
     showError("submit-error", "");
     updateProgress();
+  });
+  document.querySelector("#question-numbers").addEventListener("click", (event) => {
+    const button = event.target.closest(".question-number");
+    if (button) goTo(Number(button.dataset.index));
   });
   document.querySelector("#previous").addEventListener("click", () => goTo(position - 1));
   document.querySelector("#next").addEventListener("click", () => goTo(position + 1));
@@ -437,7 +454,7 @@ function renderRecap() {
       <p id="recap-empty" class="empty" role="status">Memuat hasil…</p>
       <div id="recap-table" class="table-wrap" tabindex="0" aria-label="Tabel nilai peserta" hidden>
         <table>
-          <thead><tr><th scope="col">Nama</th><th scope="col">NIM</th><th scope="col">Golongan</th><th scope="col">Benar</th><th scope="col">Nilai</th><th scope="col">Dikirim</th><th scope="col">Reset</th><th scope="col">Reset terakhir</th></tr></thead>
+          <thead><tr><th scope="col">Nama</th><th scope="col">NIM</th><th scope="col">Golongan</th><th scope="col">Benar</th><th scope="col">Nilai</th><th scope="col">Dikirim</th><th scope="col">Reset</th><th scope="col">Reset terakhir</th><th scope="col">Aksi</th></tr></thead>
           <tbody id="recap-rows"></tbody>
         </table>
       </div>
@@ -448,6 +465,7 @@ function renderRecap() {
   let latest = 0;
   let code = "";
   let loadedRows = [];
+  let deleting = false;
   const login = document.querySelector("#recap-login");
   const content = document.querySelector("#recap-content");
   const exportButton = document.querySelector("#export");
@@ -455,6 +473,7 @@ function renderRecap() {
   const empty = document.querySelector("#recap-empty");
   const table = document.querySelector("#recap-table");
   async function refresh() {
+    if (deleting) return;
     const request = ++latest;
     if (!code) return;
     exportButton.disabled = true;
@@ -476,6 +495,7 @@ function renderRecap() {
         <td>${escapeHtml(row.full_name)}</td><td>${escapeHtml(row.nim)}</td><td>${escapeHtml(row.group_name)}</td>
         <td>${row.correct_count}/25</td><td>${row.score}</td><td>${formatTime(row.submitted_at)}</td>
         <td>${row.reset_count}</td><td>${formatTime(row.last_reset_at)}</td>
+        <td><button class="button button-delete" type="button" data-delete-id="${escapeHtml(row.id)}" aria-label="Hapus data ${escapeHtml(row.full_name)}, NIM ${escapeHtml(row.nim)}">Hapus</button></td>
       </tr>`).join("");
       table.hidden = !results.length;
       empty.hidden = !!results.length;
@@ -492,6 +512,43 @@ function renderRecap() {
       showError(login.hidden ? "recap-error" : "recap-login-error", error.message);
     }
   }
+  document.querySelector("#recap-rows").addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-delete-id]");
+    if (!button || deleting) return;
+    const row = loadedRows.find(item => item.id === button.dataset.deleteId);
+    if (!row) return;
+    if (!window.confirm(`Hapus data ${row.full_name} (NIM ${row.nim}, Golongan ${row.group_name})?\n\nNilai, jawaban, sesi, dan catatan reset peserta ini akan dihapus permanen. Data akan hilang dari rekap dan CSV.`)) return;
+    deleting = true;
+    ++latest;
+    group.disabled = true;
+    exportButton.disabled = true;
+    const refreshButton = document.querySelector("#refresh-recap");
+    refreshButton.disabled = true;
+    document.querySelectorAll("[data-delete-id]").forEach(item => { item.disabled = true; });
+    button.textContent = "Menghapus…";
+    showError("recap-error", "");
+    let removed = false;
+    try {
+      await quizRequest("delete", {id:row.id, code});
+      removed = true;
+    } catch (error) {
+      showError("recap-error", error.message);
+    } finally {
+      deleting = false;
+      group.disabled = false;
+      refreshButton.disabled = false;
+      exportButton.disabled = loadedRows.length === 0;
+      document.querySelectorAll("[data-delete-id]").forEach(item => { item.disabled = false; });
+      button.textContent = "Hapus";
+    }
+    if (removed) {
+      // Jangan biarkan nilai lama tetap dapat diekspor jika refresh gagal.
+      loadedRows = loadedRows.filter(item => item.id !== row.id);
+      button.closest("tr").remove();
+      exportButton.disabled = true;
+      await refresh();
+    }
+  });
   group.addEventListener("change", refresh);
   document.querySelector("#refresh-recap").addEventListener("click", refresh);
   exportButton.addEventListener("click", () => void downloadRecap(code, group.value));

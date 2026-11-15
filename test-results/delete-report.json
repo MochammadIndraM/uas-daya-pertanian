@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": [
+    "Kode kosong/salah, lintas situs, ID invalid, ujian lain, dan sesi aktif ditolak tanpa menghapus hasil",
+    "Tombol per baris menampilkan identitas dan konfirmasi permanen; Batal mempertahankan data",
+    "Konfirmasi menghapus tepat satu sesi/hasil; NIM sama tetap aman; statistik dan CSV browser diperbarui",
+    "Hapus baris terakhir menghasilkan rekap/CSV kosong; data ujian lain dan sesi aktif tetap utuh",
+    "Dua penghapusan paralel aman; hasil tetap terhapus dan tidak ada error JavaScript"
+  ],
+  "database": "uas_delete_test_1794742901889"
+}

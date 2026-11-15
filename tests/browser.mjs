@@ -57,7 +57,7 @@ export async function browserFlow(base, config) {
     assert.match(await page.locator('.score').innerText(),/76/);
     await page.goto(base+'/rekap');
     await page.locator('#recap-code').fill(config.recapCode);
-    await page.locator('#recap-login button').click();
+    await page.locator('#recap-login button[type="submit"]').click();
     await page.locator('#recap-rows tr').first().waitFor();
     assert.match(await page.locator('#recap-rows').innerText(),/UIFIKTIF01/);
     const downloadEvent = page.waitForEvent('download');
@@ -83,7 +83,7 @@ export async function verifyLoadPanel(base,config,expected,csv,round) {
     const page = await browser.newPage({acceptDownloads:true});
     await page.goto(base+'/rekap');
     await page.locator('#recap-code').fill(config.recapCode);
-    await page.locator('#recap-login button').click();
+    await page.locator('#recap-login button[type="submit"]').click();
     await page.waitForFunction(() => document.querySelector('#count')?.textContent === '80');
     const rows = await page.locator('#recap-rows tr').evaluateAll(rows => rows.map(row=>[...row.cells].map(cell=>cell.textContent)));
     assert.equal(rows.length,80);

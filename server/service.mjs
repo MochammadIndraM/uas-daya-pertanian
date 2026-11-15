@@ -57,16 +57,29 @@ export function createService(pool, config, bank = bankV4) {
   async function recap(data) {
     if (!matches(data.code,config.recapCode?.trim())) return fail('Kode rekap tidak valid.',403);
     if (data.group && !groups.has(data.group)) return fail('Golongan tidak valid.',400);
-    const {rows} = await pool.query(`SELECT a.full_name,a.nim,a.group_name,r.correct_count,r.score,r.submitted_at,
+    const {rows} = await pool.query(`SELECT a.id,a.full_name,a.nim,a.group_name,r.correct_count,r.score,r.submitted_at,
       jsonb_array_length(a.reset_events) AS reset_count,a.last_reset_at FROM results r JOIN attempts a ON a.id=r.attempt_id
       WHERE a.exam_id=$1 AND ($2::text IS NULL OR a.group_name=$2)
       ORDER BY r.submitted_at DESC,a.nim,a.id`,[config.examId,data.group || null]);
     return {results:rows.map(r => ({...r,submitted_at:ms(r.submitted_at),last_reset_at:ms(r.last_reset_at)}))};
   }
+  async function deleteResult(data) {
+    if (!matches(data.code,config.recapCode?.trim())) return fail('Kode rekap tidak valid.',403);
+    if (typeof data.id !== 'string' || !uuid.test(data.id)) return fail('Data peserta tidak valid.',400);
+    return transaction(pool, async client => {
+      const row = await read(client,data.id,true);
+      if (!row) return fail('Data peserta tidak ditemukan. Muat ulang rekap.',404);
+      if (!row.result) return fail('Sesi yang belum mengirim jawaban tidak dapat dihapus dari rekap.',409);
+      await client.query('DELETE FROM results WHERE attempt_id=$1',[row.id]);
+      await client.query('DELETE FROM attempts WHERE id=$1 AND exam_id=$2',[row.id,config.examId]);
+      return {deleted:true,id:row.id};
+    });
+  }
   async function rpc(action, data = {}) {
     if (!data || typeof data !== 'object' || Array.isArray(data)) data = {};
     if (action === 'start') return start(data);
     if (action === 'recap') return recap(data);
+    if (action === 'delete') return deleteResult(data);
     if (!['get','reset','submit'].includes(action) || !uuid.test(data.id)) return fail('Sesi UAS tidak ditemukan.',404);
     return transaction(pool, async client => {
       const row = await read(client,data.id,true);

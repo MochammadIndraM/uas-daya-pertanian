@@ -43,6 +43,7 @@ export function createApp(pool, config, bank) {
   app.post('/api/attempts/:id/submit',execute('submit'));
   app.post('/api/recap',execute('recap'));
   app.post('/api/recap.csv',execute('recap'));
+  app.post('/api/recap/delete',execute('delete'));
   app.post('/api/quiz/:action',(req,res,next) => execute(req.params.action)(req,res,next));
   app.use('/api',(req,res) => res.status(404).json({error:'Rute tidak ditemukan.',status:404}));
   app.get('/rekap',(req,res) => res.sendFile(fileURLToPath(new URL('../public/index.html',import.meta.url))));
