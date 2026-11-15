@@ -1,0 +1,113 @@
+{
+  "dateWib": "2026-11-15 15:25:05",
+  "checks": [
+    {
+      "name": "Formulir dan aset anonim tanpa bank/kunci; rute file server ditolak",
+      "status": "passed"
+    },
+    {
+      "name": "Kode kosong/salah menghasilkan nol sesi dan nol soal; rekap/CSV dilindungi",
+      "status": "passed"
+    },
+    {
+      "name": "Satu peserta: 25/50; 17 pemahaman + 8 hitungan; timer database tepat 30 menit",
+      "status": "passed"
+    },
+    {
+      "name": "Reset V4: paket berganti, tenggat tetap, event idempoten dan paket lama ditolak",
+      "status": "passed"
+    },
+    {
+      "name": "Validasi jawaban, nilai server 76, kirim paralel/ulang tetap satu hasil",
+      "status": "passed"
+    },
+    {
+      "name": "Tenggat server: jawaban lengkap sesudah 30 menit ditolak; tidak ada nilai",
+      "status": "passed"
+    },
+    {
+      "name": "Bank tersimpan per versi: deployment bank baru tetap menilai sesi lama dengan kunci semula",
+      "status": "passed"
+    },
+    {
+      "name": "UAS ditutup atau kode sama dengan rekap menolak sesi baru; sesi aktif tetap dapat dibuka",
+      "status": "passed"
+    },
+    {
+      "name": "Browser desktop dan viewport seluler dengan bank fiktif",
+      "status": "passed"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "examId": "load-round-1",
+      "mode": "local",
+      "sessions": 80,
+      "results": 80,
+      "unique_results": 80,
+      "start": {
+        "launchWindowMs": 40.46810000000005,
+        "p95Ms": 515.6484,
+        "maxMs": 516.4088000000011
+      },
+      "submit": {
+        "launchWindowMs": 27.67410000000018,
+        "p95Ms": 386.47170000000006,
+        "maxMs": 393.45800000000054
+      },
+      "csvRows": 80,
+      "panelRows": 80,
+      "browserCsvMatches": true,
+      "duplicates": 0
+    },
+    {
+      "round": 2,
+      "examId": "load-round-2",
+      "mode": "local",
+      "sessions": 80,
+      "results": 80,
+      "unique_results": 80,
+      "start": {
+        "launchWindowMs": 25.71900000000096,
+        "p95Ms": 452.02940000000126,
+        "maxMs": 453.1273000000001
+      },
+      "submit": {
+        "launchWindowMs": 23.991799999999785,
+        "p95Ms": 375.7363000000005,
+        "maxMs": 378.0971000000027
+      },
+      "csvRows": 80,
+      "panelRows": 80,
+      "browserCsvMatches": true,
+      "duplicates": 0
+    },
+    {
+      "round": 3,
+      "examId": "load-round-3",
+      "mode": "35s idle + PostgreSQL restart + new pool",
+      "sessions": 80,
+      "results": 80,
+      "unique_results": 80,
+      "start": {
+        "launchWindowMs": 55.65869999999995,
+        "p95Ms": 689.2021999999997,
+        "maxMs": 692.9752000000008
+      },
+      "submit": {
+        "launchWindowMs": 23.394899999999325,
+        "p95Ms": 392.24260000000504,
+        "maxMs": 395.0155999999988
+      },
+      "csvRows": 80,
+      "panelRows": 80,
+      "browserCsvMatches": true,
+      "duplicates": 0
+    }
+  ],
+  "status": "passed",
+  "database": "uas_test_1794731105226",
+  "postgres": "PostgreSQL 17.7 on x86_64-windows, compiled by msvc-19.44.35219, 64-bit",
+  "browser": "Chrome headless: formulir anonim, kode salah/benar, event visibility reset, reload, 25 jawaban, nilai 76, panel dan unduh CSV, viewport 390px"
+}

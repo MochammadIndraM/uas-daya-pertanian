@@ -1,0 +1,802 @@
+[
+  {
+    "full_name": "Peserta Fiktif R2P078",
+    "nim": "FIKTIFR2P078",
+    "group_name": "A",
+    "correct_count": 0,
+    "score": 0,
+    "submitted_at": 1794731120656,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P079",
+    "nim": "FIKTIFR2P079",
+    "group_name": "B",
+    "correct_count": 1,
+    "score": 4,
+    "submitted_at": 1794731120656,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P077",
+    "nim": "FIKTIFR2P077",
+    "group_name": "C",
+    "correct_count": 25,
+    "score": 100,
+    "submitted_at": 1794731120656,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P076",
+    "nim": "FIKTIFR2P076",
+    "group_name": "B",
+    "correct_count": 24,
+    "score": 96,
+    "submitted_at": 1794731120655,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P075",
+    "nim": "FIKTIFR2P075",
+    "group_name": "A",
+    "correct_count": 23,
+    "score": 92,
+    "submitted_at": 1794731120655,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P073",
+    "nim": "FIKTIFR2P073",
+    "group_name": "B",
+    "correct_count": 21,
+    "score": 84,
+    "submitted_at": 1794731120654,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P074",
+    "nim": "FIKTIFR2P074",
+    "group_name": "C",
+    "correct_count": 22,
+    "score": 88,
+    "submitted_at": 1794731120654,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P072",
+    "nim": "FIKTIFR2P072",
+    "group_name": "A",
+    "correct_count": 20,
+    "score": 80,
+    "submitted_at": 1794731120653,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P071",
+    "nim": "FIKTIFR2P071",
+    "group_name": "C",
+    "correct_count": 19,
+    "score": 76,
+    "submitted_at": 1794731120653,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P070",
+    "nim": "FIKTIFR2P070",
+    "group_name": "B",
+    "correct_count": 18,
+    "score": 72,
+    "submitted_at": 1794731120652,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P069",
+    "nim": "FIKTIFR2P069",
+    "group_name": "A",
+    "correct_count": 17,
+    "score": 68,
+    "submitted_at": 1794731120623,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P068",
+    "nim": "FIKTIFR2P068",
+    "group_name": "C",
+    "correct_count": 16,
+    "score": 64,
+    "submitted_at": 1794731120623,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P067",
+    "nim": "FIKTIFR2P067",
+    "group_name": "B",
+    "correct_count": 15,
+    "score": 60,
+    "submitted_at": 1794731120622,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P065",
+    "nim": "FIKTIFR2P065",
+    "group_name": "C",
+    "correct_count": 13,
+    "score": 52,
+    "submitted_at": 1794731120622,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P066",
+    "nim": "FIKTIFR2P066",
+    "group_name": "A",
+    "correct_count": 14,
+    "score": 56,
+    "submitted_at": 1794731120621,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P064",
+    "nim": "FIKTIFR2P064",
+    "group_name": "B",
+    "correct_count": 12,
+    "score": 48,
+    "submitted_at": 1794731120621,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P063",
+    "nim": "FIKTIFR2P063",
+    "group_name": "A",
+    "correct_count": 11,
+    "score": 44,
+    "submitted_at": 1794731120621,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P062",
+    "nim": "FIKTIFR2P062",
+    "group_name": "C",
+    "correct_count": 10,
+    "score": 40,
+    "submitted_at": 1794731120620,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P061",
+    "nim": "FIKTIFR2P061",
+    "group_name": "B",
+    "correct_count": 9,
+    "score": 36,
+    "submitted_at": 1794731120620,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P060",
+    "nim": "FIKTIFR2P060",
+    "group_name": "A",
+    "correct_count": 8,
+    "score": 32,
+    "submitted_at": 1794731120620,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P057",
+    "nim": "FIKTIFR2P057",
+    "group_name": "A",
+    "correct_count": 5,
+    "score": 20,
+    "submitted_at": 1794731120586,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P059",
+    "nim": "FIKTIFR2P059",
+    "group_name": "C",
+    "correct_count": 7,
+    "score": 28,
+    "submitted_at": 1794731120586,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P058",
+    "nim": "FIKTIFR2P058",
+    "group_name": "B",
+    "correct_count": 6,
+    "score": 24,
+    "submitted_at": 1794731120585,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P056",
+    "nim": "FIKTIFR2P056",
+    "group_name": "C",
+    "correct_count": 4,
+    "score": 16,
+    "submitted_at": 1794731120585,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P055",
+    "nim": "FIKTIFR2P055",
+    "group_name": "B",
+    "correct_count": 3,
+    "score": 12,
+    "submitted_at": 1794731120584,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P054",
+    "nim": "FIKTIFR2P054",
+    "group_name": "A",
+    "correct_count": 2,
+    "score": 8,
+    "submitted_at": 1794731120584,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P053",
+    "nim": "FIKTIFR2P053",
+    "group_name": "C",
+    "correct_count": 1,
+    "score": 4,
+    "submitted_at": 1794731120584,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P052",
+    "nim": "FIKTIFR2P052",
+    "group_name": "B",
+    "correct_count": 0,
+    "score": 0,
+    "submitted_at": 1794731120583,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P051",
+    "nim": "FIKTIFR2P051",
+    "group_name": "A",
+    "correct_count": 25,
+    "score": 100,
+    "submitted_at": 1794731120583,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P050",
+    "nim": "FIKTIFR2P050",
+    "group_name": "C",
+    "correct_count": 24,
+    "score": 96,
+    "submitted_at": 1794731120582,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P049",
+    "nim": "FIKTIFR2P049",
+    "group_name": "B",
+    "correct_count": 23,
+    "score": 92,
+    "submitted_at": 1794731120547,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P047",
+    "nim": "FIKTIFR2P047",
+    "group_name": "C",
+    "correct_count": 21,
+    "score": 84,
+    "submitted_at": 1794731120547,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P046",
+    "nim": "FIKTIFR2P046",
+    "group_name": "B",
+    "correct_count": 20,
+    "score": 80,
+    "submitted_at": 1794731120546,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P048",
+    "nim": "FIKTIFR2P048",
+    "group_name": "A",
+    "correct_count": 22,
+    "score": 88,
+    "submitted_at": 1794731120546,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P044",
+    "nim": "FIKTIFR2P044",
+    "group_name": "C",
+    "correct_count": 18,
+    "score": 72,
+    "submitted_at": 1794731120546,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P045",
+    "nim": "FIKTIFR2P045",
+    "group_name": "A",
+    "correct_count": 19,
+    "score": 76,
+    "submitted_at": 1794731120546,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P043",
+    "nim": "FIKTIFR2P043",
+    "group_name": "B",
+    "correct_count": 17,
+    "score": 68,
+    "submitted_at": 1794731120545,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P042",
+    "nim": "FIKTIFR2P042",
+    "group_name": "A",
+    "correct_count": 16,
+    "score": 64,
+    "submitted_at": 1794731120545,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P041",
+    "nim": "FIKTIFR2P041",
+    "group_name": "C",
+    "correct_count": 15,
+    "score": 60,
+    "submitted_at": 1794731120544,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P040",
+    "nim": "FIKTIFR2P040",
+    "group_name": "B",
+    "correct_count": 14,
+    "score": 56,
+    "submitted_at": 1794731120544,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P039",
+    "nim": "FIKTIFR2P039",
+    "group_name": "A",
+    "correct_count": 13,
+    "score": 52,
+    "submitted_at": 1794731120510,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P038",
+    "nim": "FIKTIFR2P038",
+    "group_name": "C",
+    "correct_count": 12,
+    "score": 48,
+    "submitted_at": 1794731120510,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P037",
+    "nim": "FIKTIFR2P037",
+    "group_name": "B",
+    "correct_count": 11,
+    "score": 44,
+    "submitted_at": 1794731120510,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P036",
+    "nim": "FIKTIFR2P036",
+    "group_name": "A",
+    "correct_count": 10,
+    "score": 40,
+    "submitted_at": 1794731120509,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P035",
+    "nim": "FIKTIFR2P035",
+    "group_name": "C",
+    "correct_count": 9,
+    "score": 36,
+    "submitted_at": 1794731120509,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P034",
+    "nim": "FIKTIFR2P034",
+    "group_name": "B",
+    "correct_count": 8,
+    "score": 32,
+    "submitted_at": 1794731120508,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P033",
+    "nim": "FIKTIFR2P033",
+    "group_name": "A",
+    "correct_count": 7,
+    "score": 28,
+    "submitted_at": 1794731120508,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P031",
+    "nim": "FIKTIFR2P031",
+    "group_name": "B",
+    "correct_count": 5,
+    "score": 20,
+    "submitted_at": 1794731120508,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P030",
+    "nim": "FIKTIFR2P030",
+    "group_name": "A",
+    "correct_count": 4,
+    "score": 16,
+    "submitted_at": 1794731120507,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P032",
+    "nim": "FIKTIFR2P032",
+    "group_name": "C",
+    "correct_count": 6,
+    "score": 24,
+    "submitted_at": 1794731120507,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P029",
+    "nim": "FIKTIFR2P029",
+    "group_name": "C",
+    "correct_count": 3,
+    "score": 12,
+    "submitted_at": 1794731120473,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P028",
+    "nim": "FIKTIFR2P028",
+    "group_name": "B",
+    "correct_count": 2,
+    "score": 8,
+    "submitted_at": 1794731120472,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P027",
+    "nim": "FIKTIFR2P027",
+    "group_name": "A",
+    "correct_count": 1,
+    "score": 4,
+    "submitted_at": 1794731120472,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P026",
+    "nim": "FIKTIFR2P026",
+    "group_name": "C",
+    "correct_count": 0,
+    "score": 0,
+    "submitted_at": 1794731120471,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P024",
+    "nim": "FIKTIFR2P024",
+    "group_name": "A",
+    "correct_count": 24,
+    "score": 96,
+    "submitted_at": 1794731120471,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P025",
+    "nim": "FIKTIFR2P025",
+    "group_name": "B",
+    "correct_count": 25,
+    "score": 100,
+    "submitted_at": 1794731120470,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P023",
+    "nim": "FIKTIFR2P023",
+    "group_name": "C",
+    "correct_count": 23,
+    "score": 92,
+    "submitted_at": 1794731120470,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P022",
+    "nim": "FIKTIFR2P022",
+    "group_name": "B",
+    "correct_count": 22,
+    "score": 88,
+    "submitted_at": 1794731120469,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P021",
+    "nim": "FIKTIFR2P021",
+    "group_name": "A",
+    "correct_count": 21,
+    "score": 84,
+    "submitted_at": 1794731120469,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P020",
+    "nim": "FIKTIFR2P020",
+    "group_name": "C",
+    "correct_count": 20,
+    "score": 80,
+    "submitted_at": 1794731120468,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P019",
+    "nim": "FIKTIFR2P019",
+    "group_name": "B",
+    "correct_count": 19,
+    "score": 76,
+    "submitted_at": 1794731120436,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P018",
+    "nim": "FIKTIFR2P018",
+    "group_name": "A",
+    "correct_count": 18,
+    "score": 72,
+    "submitted_at": 1794731120435,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P017",
+    "nim": "FIKTIFR2P017",
+    "group_name": "C",
+    "correct_count": 17,
+    "score": 68,
+    "submitted_at": 1794731120435,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P016",
+    "nim": "FIKTIFR2P016",
+    "group_name": "B",
+    "correct_count": 16,
+    "score": 64,
+    "submitted_at": 1794731120435,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P015",
+    "nim": "FIKTIFR2P015",
+    "group_name": "A",
+    "correct_count": 15,
+    "score": 60,
+    "submitted_at": 1794731120434,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P014",
+    "nim": "FIKTIFR2P014",
+    "group_name": "C",
+    "correct_count": 14,
+    "score": 56,
+    "submitted_at": 1794731120434,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P011",
+    "nim": "FIKTIFR2P011",
+    "group_name": "C",
+    "correct_count": 11,
+    "score": 44,
+    "submitted_at": 1794731120434,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P013",
+    "nim": "FIKTIFR2P013",
+    "group_name": "B",
+    "correct_count": 13,
+    "score": 52,
+    "submitted_at": 1794731120433,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P012",
+    "nim": "FIKTIFR2P012",
+    "group_name": "A",
+    "correct_count": 12,
+    "score": 48,
+    "submitted_at": 1794731120433,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P010",
+    "nim": "FIKTIFR2P010",
+    "group_name": "B",
+    "correct_count": 10,
+    "score": 40,
+    "submitted_at": 1794731120433,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P009",
+    "nim": "FIKTIFR2P009",
+    "group_name": "A",
+    "correct_count": 9,
+    "score": 36,
+    "submitted_at": 1794731120399,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P008",
+    "nim": "FIKTIFR2P008",
+    "group_name": "C",
+    "correct_count": 8,
+    "score": 32,
+    "submitted_at": 1794731120399,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P007",
+    "nim": "FIKTIFR2P007",
+    "group_name": "B",
+    "correct_count": 7,
+    "score": 28,
+    "submitted_at": 1794731120399,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P006",
+    "nim": "FIKTIFR2P006",
+    "group_name": "A",
+    "correct_count": 6,
+    "score": 24,
+    "submitted_at": 1794731120398,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P005",
+    "nim": "FIKTIFR2P005",
+    "group_name": "C",
+    "correct_count": 5,
+    "score": 20,
+    "submitted_at": 1794731120398,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P004",
+    "nim": "FIKTIFR2P004",
+    "group_name": "B",
+    "correct_count": 4,
+    "score": 16,
+    "submitted_at": 1794731120398,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P003",
+    "nim": "FIKTIFR2P003",
+    "group_name": "A",
+    "correct_count": 3,
+    "score": 12,
+    "submitted_at": 1794731120397,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P002",
+    "nim": "FIKTIFR2P002",
+    "group_name": "C",
+    "correct_count": 2,
+    "score": 8,
+    "submitted_at": 1794731120397,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P001",
+    "nim": "FIKTIFR2P001",
+    "group_name": "B",
+    "correct_count": 1,
+    "score": 4,
+    "submitted_at": 1794731120397,
+    "reset_count": 0,
+    "last_reset_at": null
+  },
+  {
+    "full_name": "Peserta Fiktif R2P000",
+    "nim": "FIKTIFR2P000",
+    "group_name": "A",
+    "correct_count": 0,
+    "score": 0,
+    "submitted_at": 1794731120396,
+    "reset_count": 0,
+    "last_reset_at": null
+  }
+]

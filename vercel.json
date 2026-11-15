@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": "npm ci --omit=dev",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.mjs": { "includeFiles": "server/bank-v4.json" }
+  },
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" },
+    { "source": "/rekap", "destination": "/index.html" }
+  ]
+}

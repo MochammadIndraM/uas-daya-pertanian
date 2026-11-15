@@ -1,0 +1,642 @@
+[
+  {
+    "id": "6ec5aa06-fff3-4d20-a86a-3e7b5a39c99b",
+    "fullName": "Peserta Fiktif R1P000",
+    "nim": "FIKTIFR1P000",
+    "group": "A",
+    "correct": 0,
+    "score": 0
+  },
+  {
+    "id": "8623b0c1-257a-43bc-aaf7-06f6eabc4745",
+    "fullName": "Peserta Fiktif R1P001",
+    "nim": "FIKTIFR1P001",
+    "group": "B",
+    "correct": 1,
+    "score": 4
+  },
+  {
+    "id": "020c63ea-1516-4ae9-a57b-6e2e679ae4ab",
+    "fullName": "Peserta Fiktif R1P002",
+    "nim": "FIKTIFR1P002",
+    "group": "C",
+    "correct": 2,
+    "score": 8
+  },
+  {
+    "id": "ca800074-7270-4f72-8767-b9564a1799f9",
+    "fullName": "Peserta Fiktif R1P003",
+    "nim": "FIKTIFR1P003",
+    "group": "A",
+    "correct": 3,
+    "score": 12
+  },
+  {
+    "id": "6aae276b-eb4f-4c9e-86e1-9e1912c65b83",
+    "fullName": "Peserta Fiktif R1P004",
+    "nim": "FIKTIFR1P004",
+    "group": "B",
+    "correct": 4,
+    "score": 16
+  },
+  {
+    "id": "7a27c949-626d-4ded-9c47-828101765d28",
+    "fullName": "Peserta Fiktif R1P005",
+    "nim": "FIKTIFR1P005",
+    "group": "C",
+    "correct": 5,
+    "score": 20
+  },
+  {
+    "id": "759e73f5-d5e0-47da-9f3d-9542175c9391",
+    "fullName": "Peserta Fiktif R1P006",
+    "nim": "FIKTIFR1P006",
+    "group": "A",
+    "correct": 6,
+    "score": 24
+  },
+  {
+    "id": "194373d9-f03a-4aec-936a-ec02d33d6a3b",
+    "fullName": "Peserta Fiktif R1P007",
+    "nim": "FIKTIFR1P007",
+    "group": "B",
+    "correct": 7,
+    "score": 28
+  },
+  {
+    "id": "e0d1050f-fa9d-4c94-98f6-34e4a3044c03",
+    "fullName": "Peserta Fiktif R1P008",
+    "nim": "FIKTIFR1P008",
+    "group": "C",
+    "correct": 8,
+    "score": 32
+  },
+  {
+    "id": "8ce1ce32-819a-48b8-8006-38a411ee3f75",
+    "fullName": "Peserta Fiktif R1P009",
+    "nim": "FIKTIFR1P009",
+    "group": "A",
+    "correct": 9,
+    "score": 36
+  },
+  {
+    "id": "7dd4ee9b-57e8-420a-84d8-c10484232a4c",
+    "fullName": "Peserta Fiktif R1P010",
+    "nim": "FIKTIFR1P010",
+    "group": "B",
+    "correct": 10,
+    "score": 40
+  },
+  {
+    "id": "f8cb6435-5f00-4166-bdd2-c49e8568520d",
+    "fullName": "Peserta Fiktif R1P011",
+    "nim": "FIKTIFR1P011",
+    "group": "C",
+    "correct": 11,
+    "score": 44
+  },
+  {
+    "id": "d3c6467f-2fd5-4dc1-ac62-b636339a205d",
+    "fullName": "Peserta Fiktif R1P012",
+    "nim": "FIKTIFR1P012",
+    "group": "A",
+    "correct": 12,
+    "score": 48
+  },
+  {
+    "id": "5a9d1f1a-0184-412e-bbae-7915270dfab0",
+    "fullName": "Peserta Fiktif R1P013",
+    "nim": "FIKTIFR1P013",
+    "group": "B",
+    "correct": 13,
+    "score": 52
+  },
+  {
+    "id": "63c66188-a235-4182-aad6-57e1de11a68a",
+    "fullName": "Peserta Fiktif R1P014",
+    "nim": "FIKTIFR1P014",
+    "group": "C",
+    "correct": 14,
+    "score": 56
+  },
+  {
+    "id": "58605bf3-7178-4f53-ae22-6f3b88464356",
+    "fullName": "Peserta Fiktif R1P015",
+    "nim": "FIKTIFR1P015",
+    "group": "A",
+    "correct": 15,
+    "score": 60
+  },
+  {
+    "id": "28796e54-f0a8-4a5d-9e66-492bb4b93172",
+    "fullName": "Peserta Fiktif R1P016",
+    "nim": "FIKTIFR1P016",
+    "group": "B",
+    "correct": 16,
+    "score": 64
+  },
+  {
+    "id": "9c6c2264-d392-45ea-abf0-e0b150c2e589",
+    "fullName": "Peserta Fiktif R1P017",
+    "nim": "FIKTIFR1P017",
+    "group": "C",
+    "correct": 17,
+    "score": 68
+  },
+  {
+    "id": "7532e711-533b-4a0f-90bd-8aff492b11fb",
+    "fullName": "Peserta Fiktif R1P018",
+    "nim": "FIKTIFR1P018",
+    "group": "A",
+    "correct": 18,
+    "score": 72
+  },
+  {
+    "id": "3aa3434b-9281-42c1-bd5b-cc5b6490bfc6",
+    "fullName": "Peserta Fiktif R1P019",
+    "nim": "FIKTIFR1P019",
+    "group": "B",
+    "correct": 19,
+    "score": 76
+  },
+  {
+    "id": "4bead93d-0092-4a3e-9b54-495909ae25ea",
+    "fullName": "Peserta Fiktif R1P020",
+    "nim": "FIKTIFR1P020",
+    "group": "C",
+    "correct": 20,
+    "score": 80
+  },
+  {
+    "id": "26f6eeec-7642-4c53-b54e-9b7578e54d93",
+    "fullName": "Peserta Fiktif R1P021",
+    "nim": "FIKTIFR1P021",
+    "group": "A",
+    "correct": 21,
+    "score": 84
+  },
+  {
+    "id": "a00e70ba-3eb0-41dc-a06d-44a5f3b1b92d",
+    "fullName": "Peserta Fiktif R1P022",
+    "nim": "FIKTIFR1P022",
+    "group": "B",
+    "correct": 22,
+    "score": 88
+  },
+  {
+    "id": "2533e4ec-8977-4584-b28b-418237ed51d5",
+    "fullName": "Peserta Fiktif R1P023",
+    "nim": "FIKTIFR1P023",
+    "group": "C",
+    "correct": 23,
+    "score": 92
+  },
+  {
+    "id": "e1b8d427-fce8-4c55-acea-9c63b625d701",
+    "fullName": "Peserta Fiktif R1P024",
+    "nim": "FIKTIFR1P024",
+    "group": "A",
+    "correct": 24,
+    "score": 96
+  },
+  {
+    "id": "13abbc62-cd32-43eb-99ae-5e072f5fd27e",
+    "fullName": "Peserta Fiktif R1P025",
+    "nim": "FIKTIFR1P025",
+    "group": "B",
+    "correct": 25,
+    "score": 100
+  },
+  {
+    "id": "c065543f-12a9-49da-b744-cc12e75c9e3d",
+    "fullName": "Peserta Fiktif R1P026",
+    "nim": "FIKTIFR1P026",
+    "group": "C",
+    "correct": 0,
+    "score": 0
+  },
+  {
+    "id": "d39b7afe-9d9d-48e1-9eee-b0244fbd192a",
+    "fullName": "Peserta Fiktif R1P027",
+    "nim": "FIKTIFR1P027",
+    "group": "A",
+    "correct": 1,
+    "score": 4
+  },
+  {
+    "id": "c7d9ddd3-953c-422d-8172-5cd30ff5856e",
+    "fullName": "Peserta Fiktif R1P028",
+    "nim": "FIKTIFR1P028",
+    "group": "B",
+    "correct": 2,
+    "score": 8
+  },
+  {
+    "id": "8110335b-96d9-437e-a5b4-12b6ad5c81a5",
+    "fullName": "Peserta Fiktif R1P029",
+    "nim": "FIKTIFR1P029",
+    "group": "C",
+    "correct": 3,
+    "score": 12
+  },
+  {
+    "id": "9e9aa9c3-47b6-4010-bb5e-a6449acf0e68",
+    "fullName": "Peserta Fiktif R1P030",
+    "nim": "FIKTIFR1P030",
+    "group": "A",
+    "correct": 4,
+    "score": 16
+  },
+  {
+    "id": "56d6b7ca-0643-407c-90d3-739bb6ac5dd8",
+    "fullName": "Peserta Fiktif R1P031",
+    "nim": "FIKTIFR1P031",
+    "group": "B",
+    "correct": 5,
+    "score": 20
+  },
+  {
+    "id": "19504177-d638-4118-abf9-52ecd3658a72",
+    "fullName": "Peserta Fiktif R1P032",
+    "nim": "FIKTIFR1P032",
+    "group": "C",
+    "correct": 6,
+    "score": 24
+  },
+  {
+    "id": "c07d4810-39a5-43d1-b82d-3d75b3fa9b94",
+    "fullName": "Peserta Fiktif R1P033",
+    "nim": "FIKTIFR1P033",
+    "group": "A",
+    "correct": 7,
+    "score": 28
+  },
+  {
+    "id": "e8f6d405-1147-4129-a700-d6451d41e834",
+    "fullName": "Peserta Fiktif R1P034",
+    "nim": "FIKTIFR1P034",
+    "group": "B",
+    "correct": 8,
+    "score": 32
+  },
+  {
+    "id": "8b47e127-8640-4b3d-9178-561fe07e60bd",
+    "fullName": "Peserta Fiktif R1P035",
+    "nim": "FIKTIFR1P035",
+    "group": "C",
+    "correct": 9,
+    "score": 36
+  },
+  {
+    "id": "85066206-a671-4c72-9fec-b2e1636d2fe6",
+    "fullName": "Peserta Fiktif R1P036",
+    "nim": "FIKTIFR1P036",
+    "group": "A",
+    "correct": 10,
+    "score": 40
+  },
+  {
+    "id": "0b127fd7-e022-4b4a-be7e-139b9d18edda",
+    "fullName": "Peserta Fiktif R1P037",
+    "nim": "FIKTIFR1P037",
+    "group": "B",
+    "correct": 11,
+    "score": 44
+  },
+  {
+    "id": "75151787-7731-4a1a-8c10-5af07c003c12",
+    "fullName": "Peserta Fiktif R1P038",
+    "nim": "FIKTIFR1P038",
+    "group": "C",
+    "correct": 12,
+    "score": 48
+  },
+  {
+    "id": "f6923056-9378-42c1-a1ab-5dd34bc88b70",
+    "fullName": "Peserta Fiktif R1P039",
+    "nim": "FIKTIFR1P039",
+    "group": "A",
+    "correct": 13,
+    "score": 52
+  },
+  {
+    "id": "160ad6bb-bd9a-415a-8b2f-3e4ff8519f24",
+    "fullName": "Peserta Fiktif R1P040",
+    "nim": "FIKTIFR1P040",
+    "group": "B",
+    "correct": 14,
+    "score": 56
+  },
+  {
+    "id": "e17ff5bf-fef7-47d7-a15a-d3833dd95b97",
+    "fullName": "Peserta Fiktif R1P041",
+    "nim": "FIKTIFR1P041",
+    "group": "C",
+    "correct": 15,
+    "score": 60
+  },
+  {
+    "id": "04669c56-6a71-4616-baf8-b8eb02b19514",
+    "fullName": "Peserta Fiktif R1P042",
+    "nim": "FIKTIFR1P042",
+    "group": "A",
+    "correct": 16,
+    "score": 64
+  },
+  {
+    "id": "c0e03ccc-022f-466e-9cc4-a8245423b238",
+    "fullName": "Peserta Fiktif R1P043",
+    "nim": "FIKTIFR1P043",
+    "group": "B",
+    "correct": 17,
+    "score": 68
+  },
+  {
+    "id": "31ed598f-04b9-4c02-86e4-c57cd53d3a5c",
+    "fullName": "Peserta Fiktif R1P044",
+    "nim": "FIKTIFR1P044",
+    "group": "C",
+    "correct": 18,
+    "score": 72
+  },
+  {
+    "id": "3c4dcbf9-79e8-4989-a941-1231a3404cdd",
+    "fullName": "Peserta Fiktif R1P045",
+    "nim": "FIKTIFR1P045",
+    "group": "A",
+    "correct": 19,
+    "score": 76
+  },
+  {
+    "id": "1ac92493-b8bc-46e1-a9e7-0729003ef813",
+    "fullName": "Peserta Fiktif R1P046",
+    "nim": "FIKTIFR1P046",
+    "group": "B",
+    "correct": 20,
+    "score": 80
+  },
+  {
+    "id": "74285863-b074-49ca-a251-706b6b3ba652",
+    "fullName": "Peserta Fiktif R1P047",
+    "nim": "FIKTIFR1P047",
+    "group": "C",
+    "correct": 21,
+    "score": 84
+  },
+  {
+    "id": "aa6a6c7e-0df1-4b17-8f41-4d54e7afd52c",
+    "fullName": "Peserta Fiktif R1P048",
+    "nim": "FIKTIFR1P048",
+    "group": "A",
+    "correct": 22,
+    "score": 88
+  },
+  {
+    "id": "d42c6cdb-0f1b-4e6d-883a-cbe94b53a9f0",
+    "fullName": "Peserta Fiktif R1P049",
+    "nim": "FIKTIFR1P049",
+    "group": "B",
+    "correct": 23,
+    "score": 92
+  },
+  {
+    "id": "f9b78dd4-13e6-4cfc-8e42-6624470cd1be",
+    "fullName": "Peserta Fiktif R1P050",
+    "nim": "FIKTIFR1P050",
+    "group": "C",
+    "correct": 24,
+    "score": 96
+  },
+  {
+    "id": "90d20a70-03e4-42d9-8eef-4b120a0d3336",
+    "fullName": "Peserta Fiktif R1P051",
+    "nim": "FIKTIFR1P051",
+    "group": "A",
+    "correct": 25,
+    "score": 100
+  },
+  {
+    "id": "653c5e7f-3a22-4074-b24c-a78a6c5c7f11",
+    "fullName": "Peserta Fiktif R1P052",
+    "nim": "FIKTIFR1P052",
+    "group": "B",
+    "correct": 0,
+    "score": 0
+  },
+  {
+    "id": "5a6eafe3-bddd-4d46-b50d-d136fdb5f477",
+    "fullName": "Peserta Fiktif R1P053",
+    "nim": "FIKTIFR1P053",
+    "group": "C",
+    "correct": 1,
+    "score": 4
+  },
+  {
+    "id": "817a4fea-1d64-424a-997b-1625208d26a9",
+    "fullName": "Peserta Fiktif R1P054",
+    "nim": "FIKTIFR1P054",
+    "group": "A",
+    "correct": 2,
+    "score": 8
+  },
+  {
+    "id": "400c2c59-d2e1-4b64-9f5c-a834121e5791",
+    "fullName": "Peserta Fiktif R1P055",
+    "nim": "FIKTIFR1P055",
+    "group": "B",
+    "correct": 3,
+    "score": 12
+  },
+  {
+    "id": "9e0a2ab8-da30-4575-94ae-5bfa3a16acd9",
+    "fullName": "Peserta Fiktif R1P056",
+    "nim": "FIKTIFR1P056",
+    "group": "C",
+    "correct": 4,
+    "score": 16
+  },
+  {
+    "id": "a2855707-15f8-4b97-934f-4b6f359ecef0",
+    "fullName": "Peserta Fiktif R1P057",
+    "nim": "FIKTIFR1P057",
+    "group": "A",
+    "correct": 5,
+    "score": 20
+  },
+  {
+    "id": "36cb931c-2e3f-4a8e-b54e-23bca3500d75",
+    "fullName": "Peserta Fiktif R1P058",
+    "nim": "FIKTIFR1P058",
+    "group": "B",
+    "correct": 6,
+    "score": 24
+  },
+  {
+    "id": "9f00736b-344d-429b-bb49-3206c45a2b45",
+    "fullName": "Peserta Fiktif R1P059",
+    "nim": "FIKTIFR1P059",
+    "group": "C",
+    "correct": 7,
+    "score": 28
+  },
+  {
+    "id": "081938ed-e274-4f72-9cf5-135b76fd4c38",
+    "fullName": "Peserta Fiktif R1P060",
+    "nim": "FIKTIFR1P060",
+    "group": "A",
+    "correct": 8,
+    "score": 32
+  },
+  {
+    "id": "dac103c5-a346-46d7-a838-8f9feed8435c",
+    "fullName": "Peserta Fiktif R1P061",
+    "nim": "FIKTIFR1P061",
+    "group": "B",
+    "correct": 9,
+    "score": 36
+  },
+  {
+    "id": "25343d3e-122c-4b8f-94da-3e0f277d8eff",
+    "fullName": "Peserta Fiktif R1P062",
+    "nim": "FIKTIFR1P062",
+    "group": "C",
+    "correct": 10,
+    "score": 40
+  },
+  {
+    "id": "eb01e6f8-5bdd-400a-921c-cbac6b84b09f",
+    "fullName": "Peserta Fiktif R1P063",
+    "nim": "FIKTIFR1P063",
+    "group": "A",
+    "correct": 11,
+    "score": 44
+  },
+  {
+    "id": "91530421-d23a-4e62-bb87-2134a9f14256",
+    "fullName": "Peserta Fiktif R1P064",
+    "nim": "FIKTIFR1P064",
+    "group": "B",
+    "correct": 12,
+    "score": 48
+  },
+  {
+    "id": "c1fd94a9-498b-4304-8c48-f02813fee3a7",
+    "fullName": "Peserta Fiktif R1P065",
+    "nim": "FIKTIFR1P065",
+    "group": "C",
+    "correct": 13,
+    "score": 52
+  },
+  {
+    "id": "7b4a923d-680e-4255-90ae-a48535665443",
+    "fullName": "Peserta Fiktif R1P066",
+    "nim": "FIKTIFR1P066",
+    "group": "A",
+    "correct": 14,
+    "score": 56
+  },
+  {
+    "id": "b0460c1f-eb4b-43ec-8a36-5380f3bfa651",
+    "fullName": "Peserta Fiktif R1P067",
+    "nim": "FIKTIFR1P067",
+    "group": "B",
+    "correct": 15,
+    "score": 60
+  },
+  {
+    "id": "4c99cd12-7ed6-457e-ac6d-f86ebcca07d1",
+    "fullName": "Peserta Fiktif R1P068",
+    "nim": "FIKTIFR1P068",
+    "group": "C",
+    "correct": 16,
+    "score": 64
+  },
+  {
+    "id": "41c3ba50-89e5-4133-b2f8-42bce2e8e941",
+    "fullName": "Peserta Fiktif R1P069",
+    "nim": "FIKTIFR1P069",
+    "group": "A",
+    "correct": 17,
+    "score": 68
+  },
+  {
+    "id": "2d5ced23-e49b-41bd-8e8f-11d57c2c90f9",
+    "fullName": "Peserta Fiktif R1P070",
+    "nim": "FIKTIFR1P070",
+    "group": "B",
+    "correct": 18,
+    "score": 72
+  },
+  {
+    "id": "02352724-14aa-404f-b245-15bea2b84cb6",
+    "fullName": "Peserta Fiktif R1P071",
+    "nim": "FIKTIFR1P071",
+    "group": "C",
+    "correct": 19,
+    "score": 76
+  },
+  {
+    "id": "0bb891f0-79cc-460a-82d9-ee0c60403d55",
+    "fullName": "Peserta Fiktif R1P072",
+    "nim": "FIKTIFR1P072",
+    "group": "A",
+    "correct": 20,
+    "score": 80
+  },
+  {
+    "id": "8abab0d4-bae6-4646-8cdc-8773010c83eb",
+    "fullName": "Peserta Fiktif R1P073",
+    "nim": "FIKTIFR1P073",
+    "group": "B",
+    "correct": 21,
+    "score": 84
+  },
+  {
+    "id": "105a2204-d410-4181-a98b-7db6f5013efa",
+    "fullName": "Peserta Fiktif R1P074",
+    "nim": "FIKTIFR1P074",
+    "group": "C",
+    "correct": 22,
+    "score": 88
+  },
+  {
+    "id": "be9d314b-2e8c-418d-8b76-96f3324a0f4d",
+    "fullName": "Peserta Fiktif R1P075",
+    "nim": "FIKTIFR1P075",
+    "group": "A",
+    "correct": 23,
+    "score": 92
+  },
+  {
+    "id": "1bbcbb9d-fe90-4216-a821-156a7b3029be",
+    "fullName": "Peserta Fiktif R1P076",
+    "nim": "FIKTIFR1P076",
+    "group": "B",
+    "correct": 24,
+    "score": 96
+  },
+  {
+    "id": "492e98b8-d964-410e-82cd-895d152fa4e5",
+    "fullName": "Peserta Fiktif R1P077",
+    "nim": "FIKTIFR1P077",
+    "group": "C",
+    "correct": 25,
+    "score": 100
+  },
+  {
+    "id": "dda4e3c2-97b4-4a26-9ec4-7a0ee797f6e5",
+    "fullName": "Peserta Fiktif R1P078",
+    "nim": "FIKTIFR1P078",
+    "group": "A",
+    "correct": 0,
+    "score": 0
+  },
+  {
+    "id": "e645613f-eefa-4047-a858-f69f4f9116fe",
+    "fullName": "Peserta Fiktif R1P079",
+    "nim": "FIKTIFR1P079",
+    "group": "B",
+    "correct": 1,
+    "score": 4
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "sitesSource": "Paket_Sumber_Sites_UAS_Daya_Pertanian/worker/index.js",
+  "cssUnchanged": true,
+  "hashes": [
+    {
+      "path": "sources/sites-worker.js",
+      "sha256": "7ff33786257226e41865665ac0fcca58535931292de9cc4bf4f792ff97669b0a"
+    },
+    {
+      "path": "UAS_Daya_Pertanian_V4_Apps_Script.gs",
+      "sha256": "5c1c14b4d2271528e29adbe47f6d7df9489f855b43b9f2027023fa77a7781332"
+    },
+    {
+      "path": "sources/PRD-original.docx",
+      "sha256": "491152dac64ddb87269c183529612a8f75fb9e05e4b5d86a403ce4ed89dd03c5"
+    }
+  ]
+}

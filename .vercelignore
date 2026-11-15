@@ -1,0 +1,17 @@
+# Rahasia dan database lokal tidak ikut diunggah.
+.env
+.env.*
+.local/
+.git/
+.agents/
+.codex/
+.aws/
+node_modules/
+sources/
+tests/
+test-results/
+docs/
+scripts/
+*.gs
+*.docx
+README.md
