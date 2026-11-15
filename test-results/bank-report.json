@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "database": "uas_bank_test_1794743876960",
+  "checks": [
+    "Excel .xlsx roundtrip tepat 50 soal; template 50 ID/metadata, petunjuk, contoh, dan kolom kunci kosong",
+    "14 jenis kesalahan isi, arsip rusak, dan ukuran >1 MB ditolak dengan pesan per baris",
+    "Template, ekspor kunci, status, pemeriksaan, dan aktivasi dilindungi kode dosen; lintas situs dan format salah ditolak",
+    "Pratinjau tidak mengaktifkan bank; template belum diisi/unggahan salah tidak mengubah bank atau membuat versi parsial",
+    "Bank baru persisten di PostgreSQL dan per EXAM_ID; sesi baru memakai unggahan, reset/nilai sesi lama tetap memakai kunci lama; konflik aktivasi ditolak",
+    "Chrome desktop/390px: template terunduh, file salah ditolak, validasi menampilkan ringkasan, aktivasi berhasil, soal baru dan ekspor aktif cocok"
+  ]
+}

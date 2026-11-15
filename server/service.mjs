@@ -1,6 +1,7 @@
 import { createHash, timingSafeEqual } from 'node:crypto';
 import { bankV4, bankVersion, selectPackage } from './bank.mjs';
 import { transaction } from './db.mjs';
+import { BankValidationError,decodeExcel,parseBankExcel,createBankExcel,bankSummary,EXCEL_MIME } from './bank-excel.mjs';
 
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const groups = new Set(['A','B','C']);
@@ -14,6 +15,12 @@ export function createService(pool, config, bank = bankV4) {
   selectPackage(bank);
   let bankReady;
   const ensureBank = () => bankReady ??= pool.query('INSERT INTO bank_versions(version, questions) VALUES ($1,$2) ON CONFLICT DO NOTHING', [version, JSON.stringify(bank)]).catch(e => { bankReady = null; throw e; });
+
+  async function activeBank(client) {
+    const {rows}=await client.query(`SELECT b.version,b.questions,e.updated_at FROM exam_banks e
+      JOIN bank_versions b ON b.version=e.bank_version WHERE e.exam_id=$1`,[config.examId]);
+    return rows[0] || {version,questions:bank,updated_at:null};
+  }
 
   async function read(client, id, lock = false) {
     const {rows} = await client.query(`SELECT a.*, b.questions AS bank FROM attempts a JOIN bank_versions b ON b.version=a.bank_version WHERE a.id=$1 AND a.exam_id=$2 ${lock ? 'FOR UPDATE OF a' : ''}`, [id,config.examId]);
@@ -47,9 +54,10 @@ export function createService(pool, config, bank = bankV4) {
     if (!matches(data.startCode,code)) return fail('Kode mulai UAS tidak valid.',403);
     await ensureBank();
     return transaction(pool, async client => {
+      const current=await activeBank(client);
       await client.query(`INSERT INTO attempts(id,exam_id,full_name,nim,group_name,bank_version,question_ids,started_at,deadline_at)
         VALUES($1,$2,$3,$4,$5,$6,$7,statement_timestamp(),statement_timestamp()+interval '30 minutes') ON CONFLICT(id) DO NOTHING`,
-      [data.id,config.examId,fullName,nim,data.group,version,JSON.stringify(selectPackage(bank))]);
+      [data.id,config.examId,fullName,nim,data.group,current.version,JSON.stringify(selectPackage(current.questions))]);
       const row = await read(client,data.id,true);
       return row ? payload(client,row) : fail('Sesi UAS tidak ditemukan.',404);
     });
@@ -75,11 +83,50 @@ export function createService(pool, config, bank = bankV4) {
       return {deleted:true,id:row.id};
     });
   }
+  async function manageBank(action,data) {
+    if(!matches(data.code,config.recapCode?.trim())) return fail('Kode rekap tidak valid.',403);
+    if(action==='bank-status') {
+      const current=await activeBank(pool);
+      return {...bankSummary(current.questions),version:current.version,examId:config.examId,updatedAt:ms(current.updated_at),source:current.updated_at?'uploaded':'default'};
+    }
+    if(action==='bank-template' || action==='bank-export') {
+      const current=await activeBank(pool);
+      return {download:await createBankExcel(current.questions,{blank:action==='bank-template'}),mime:EXCEL_MIME,
+        filename:action==='bank-template'?'Template_Soal_UAS_Daya_Pertanian.xlsx':'Bank_Soal_Aktif_UAS_Daya_Pertanian.xlsx'};
+    }
+    try {
+      const questions=await parseBankExcel(decodeExcel(data));
+      // Pemeriksaan pengacakan server juga harus lulus sebelum versi disimpan.
+      selectPackage(questions);
+      const nextVersion=bankVersion(questions);
+      if(action==='bank-validate') {
+        const current=await activeBank(pool);
+        return {...bankSummary(questions),version:nextVersion,activeVersion:current.version,changed:nextVersion!==current.version,
+          preview:questions.slice(0,3).map(({id,prompt,topic,section})=>({id,prompt,topic,section}))};
+      }
+      if(typeof data.activeVersion!=='string') return fail('Periksa file terlebih dahulu sebelum menggunakan bank baru.',400);
+      await ensureBank();
+      return transaction(pool, async client => {
+        // Serialisasi aktivasi per ujian, termasuk ketika baris bank aktif belum ada.
+        await client.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[config.examId]);
+        const current=await activeBank(client);
+        if(current.version!==data.activeVersion) return fail('Bank aktif sudah berubah. Periksa file kembali sebelum menggunakannya.',409);
+        await client.query('INSERT INTO bank_versions(version,questions) VALUES($1,$2) ON CONFLICT DO NOTHING',[nextVersion,JSON.stringify(questions)]);
+        const {rows}=await client.query(`INSERT INTO exam_banks(exam_id,bank_version) VALUES($1,$2)
+          ON CONFLICT(exam_id) DO UPDATE SET bank_version=EXCLUDED.bank_version,updated_at=clock_timestamp() RETURNING updated_at`,[config.examId,nextVersion]);
+        return {...bankSummary(questions),version:nextVersion,examId:config.examId,updatedAt:ms(rows[0].updated_at),activated:true};
+      });
+    } catch(error) {
+      if(error instanceof BankValidationError) return fail(error.message,400,{errors:error.errors});
+      throw error;
+    }
+  }
   async function rpc(action, data = {}) {
     if (!data || typeof data !== 'object' || Array.isArray(data)) data = {};
     if (action === 'start') return start(data);
     if (action === 'recap') return recap(data);
     if (action === 'delete') return deleteResult(data);
+    if (['bank-status','bank-template','bank-export','bank-validate','bank-upload'].includes(action)) return manageBank(action,data);
     if (!['get','reset','submit'].includes(action) || !uuid.test(data.id)) return fail('Sesi UAS tidak ditemukan.',404);
     return transaction(pool, async client => {
       const row = await read(client,data.id,true);

@@ -3,7 +3,11 @@ import { createHash, randomInt } from 'node:crypto';
 
 export const bankV4 = JSON.parse(readFileSync(new URL('./bank-v4.json', import.meta.url)));
 export function bankVersion(bank) {
-  return 'v4-' + createHash('sha256').update(JSON.stringify(bank)).digest('hex');
+  // Urutan properti objek/urutan baris Excel tidak boleh membuat versi semu.
+  const canonical=[...bank].sort((a,b)=>Number(a.id.slice(1))-Number(b.id.slice(1))).map(
+    ({id,section,topic,prompt,options,correct,points})=>({id,section,topic,prompt,options,correct,points}),
+  );
+  return 'v4-' + createHash('sha256').update(JSON.stringify(canonical)).digest('hex');
 }
 export function selectPackage(bank, previous = []) {
   if (bank.length !== 50) throw new Error('Bank harus berisi 50 soal.');

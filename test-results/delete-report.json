@@ -7,5 +7,5 @@
     "Hapus baris terakhir menghasilkan rekap/CSV kosong; data ujian lain dan sesi aktif tetap utuh",
     "Dua penghapusan paralel aman; hasil tetap terhapus dan tidak ada error JavaScript"
   ],
-  "database": "uas_delete_test_1794742901889"
+  "database": "uas_delete_test_1794744029602"
 }

@@ -9,6 +9,7 @@ export function createPool(connectionString) {
 }
 export async function migrate(pool) {
   await pool.query(await readFile(new URL('../sql/001-init.sql', import.meta.url), 'utf8'));
+  await pool.query(await readFile(new URL('../sql/002-exam-banks.sql', import.meta.url), 'utf8'));
 }
 export async function transaction(pool, action) {
   const client = await pool.connect();

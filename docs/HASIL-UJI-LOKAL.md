@@ -1,10 +1,10 @@
 # Hasil uji lokal UAS Daya Pertanian
 
-Waktu mulai: 2026-11-15 15:25:05 WIB. Status akhir: **PASSED**.
+Waktu mulai: 2026-11-15 18:58:30 WIB. Status akhir: **PASSED**.
 
 ## Lingkungan dan ruang lingkup
 
-Windows, Node.js 24, PostgreSQL nyata dari embedded-postgres 17.7.0-beta.16, driver pg, dan Chrome headless melalui Playwright. Browser memakai instalasi Chrome lokal, tanpa login. Database uji: `uas_test_1794731105226`, cluster terpisah pada port 55433, data di `.local/test`. Seluruh soal dan peserta uji fiktif. Backend yang diuji adalah aplikasi Express yang sama dengan entry point lokal/Vercel; hanya konfigurasi ujian dan bank yang diinjeksi dari fixture tes.
+Windows, Node.js 24, PostgreSQL nyata dari embedded-postgres 17.7.0-beta.16, driver pg, dan Chrome headless melalui Playwright. Browser memakai instalasi Chrome lokal, tanpa login. Database uji: `uas_test_1794743910359`, cluster terpisah pada port 55433, data di `.local/test`. Seluruh soal dan peserta uji fiktif. Backend yang diuji adalah aplikasi Express yang sama dengan entry point lokal/Vercel; hanya konfigurasi ujian dan bank yang diinjeksi dari fixture tes.
 
 Versi database: PostgreSQL 17.7 on x86_64-windows, compiled by msvc-19.44.35219, 64-bit.
 
@@ -34,9 +34,9 @@ Setiap putaran meluncurkan 80 permintaan mulai dalam <1 detik dan 80 permintaan 
 
 | Putaran | Sesi | Nilai DB | Baris panel | Baris CSV | p95 mulai (detik) | p95 kirim (detik) | Nilai ganda |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 80 | 80 | 80 | 80 | 0.516 | 0.386 | 0 |
-| 2 | 80 | 80 | 80 | 80 | 0.452 | 0.376 | 0 |
-| 3 | 80 | 80 | 80 | 80 | 0.689 | 0.392 | 0 |
+| 1 | 80 | 80 | 80 | 80 | 0.511 | 0.458 | 0 |
+| 2 | 80 | 80 | 80 | 80 | 0.425 | 0.283 | 0 |
+| 3 | 80 | 80 | 80 | 80 | 0.704 | 0.329 | 0 |
 
 Target p95 ≤5 detik diperiksa oleh assertion. Golongan A/B/C diperiksa masing-masing **27/27/26** peserta. Setelah pengiriman pertama, semua 80 peserta mengirim ulang dan jumlah hasil tetap 80. Putaran ketiga dijalankan sesudah idle lokal 35 detik, PostgreSQL dihentikan/dijalankan kembali, dan pool koneksi baru dibuat.
 

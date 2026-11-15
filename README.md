@@ -68,6 +68,8 @@ Google Chrome perlu terpasang untuk uji browser. Jalankan dari terminal lain:
 npm.cmd test
 ```
 
+Uji fitur tambahan dapat dijalankan terpisah dengan `npm.cmd run test:delete` dan `npm.cmd run test:bank`. Keduanya memakai database uji baru dan data fiktif, bukan `.env`. Jalankan satu per satu karena memakai port cluster uji yang sama, 55433.
+
 Tes membuat database baru bernama `uas_test_<timestamp>` di cluster PostgreSQL terpisah `.local/test/`, port 55433. Tes tidak membaca `.env` atau mengakses database peserta/produksi. Bank uji berisi 50 soal fiktif; identitas peserta juga fiktif. Data uji disimpan, bukan dicampur ke rekap `uas_local`.
 
 Urutan tes: akses/kode salah, satu peserta, komposisi, reset V4, tenggat server, penilaian 76, kirim ganda/paralel, versi bank, ujian ditutup, browser desktop/viewport 390px, lalu **3 putaran × 80 peserta**. Tiap putaran meluncurkan 80 mulai dalam <1 detik dan 80 kirim dalam <1 detik; membandingkan skor harapan dengan PostgreSQL, rekap, CSV penuh, dan filter A/B/C. Putaran ketiga menunggu idle 35 detik dan merestart PostgreSQL/pool lokal. Tidak ada retry tersembunyi. p95 mulai dan kirim harus ≤5 detik.
@@ -75,6 +77,29 @@ Urutan tes: akses/kode salah, satu peserta, komposisi, reset V4, tenggat server,
 Pemeriksaan habis waktu menggunakan perubahan waktu sesi di database uji ke masa lampau; tidak menunggu 30 menit waktu nyata. UI reset diuji dengan event visibility yang disimulasikan. Uji beban adalah permintaan HTTP serentak, bukan 80 browser fisik.
 
 Hasil terbaru tersimpan dalam `test-results/report.json`, `round-1.csv` sampai `round-3.csv`, rekap JSON, data harapan, serta CSV dan tangkapan layar dari browser. Panel browser juga diperiksa berisi tepat 80 baris per putaran beserta filter golongan. Lihat [laporan aktual](docs/HASIL-UJI-LOKAL.md). Untuk meninjau database uji dengan klien SQL, kredensial ada di `.local/test/credentials.json`; cluster dihentikan setelah tes selesai. Jangan mempublikasikan folder `.local`.
+
+## Memperbarui bank soal melalui Excel
+
+Sebelum memakai fitur ini pada instalasi yang sudah ada, terapkan migrasi tambahan:
+
+```powershell
+npm.cmd ci
+npm.cmd run db:migrate
+```
+
+Jalankan ketika PostgreSQL lokal aktif. Restart `npm.cmd run dev`, lalu refresh browser dengan Ctrl+F5. Perintah migrasi menerapkan `001-init.sql` dan `002-exam-banks.sql` secara idempoten tanpa menghapus sesi/nilai yang ada. Untuk Neon yang sudah terpasang, jalankan isi **`sql/002-exam-banks.sql`** di SQL Editor Neon sebelum redeploy. `DATABASE_URL` menentukan database tujuan `db:migrate`; gunakan lingkungan yang memang ingin diperbarui.
+
+1. Buka **Rekap dosen** dan masukkan kode dosen.
+2. Pada bagian **Bank soal**, klik **Unduh template Excel**. Template juga tersedia sebagai `templates/Template_Soal_UAS_Daya_Pertanian.xlsx`; buat ulang dengan `npm.cmd run template:excel`.
+3. Buka file di Excel. Isi sheet **Soal** sebanyak 50 baris. ID `q1`–`q50`, Jenis, Materi, dan Poin sudah disediakan. Lengkapi **Pertanyaan**, **Opsi A**, **Opsi B**, **Opsi C**, **Opsi D**, dan **Kunci** (`A`, `B`, `C`, atau `D`). Ada sheet **Petunjuk** dan **Contoh**; contoh fiktif tidak diimpor.
+4. Untuk mengedit soal yang sudah digunakan, klik **Unduh soal aktif**. File ini berisi seluruh 50 soal beserta kunci dan hanya dapat diunduh dengan kode dosen.
+5. Simpan sebagai `.xlsx`, maksimal 1 MB. Gunakan teks biasa, tanpa gambar, rumus, macro, password, atau lampiran. Pertanyaan maksimal 5.000 karakter; setiap opsi maksimal 2.000 karakter.
+6. Pilih file, klik **Periksa file**. Server memeriksa 50 ID unik, seluruh kolom wajib, kunci A–D, poin 4, pasangan, dan komposisi. Pesan kesalahan mencantumkan baris yang perlu diperbaiki. Pemeriksaan saja tidak mengaktifkan soal.
+7. Tinjau ringkasan komposisi dan cuplikan soal, lalu klik **Gunakan untuk sesi baru**. Bank disimpan di PostgreSQL untuk `EXAM_ID` aktif; tidak perlu restart/deploy lagi setiap kali mengunggah soal berikutnya.
+
+**Sesi yang sudah dibuat tetap memakai versi soal dan kunci semula**, termasuk bila paketnya di-reset karena pindah tab. Unggahan hanya berlaku untuk sesi baru. Jika dosen lain mengaktifkan bank saat file sedang diperiksa, server meminta pemeriksaan ulang agar perubahan tidak saling menimpa. File tidak valid tidak membuat bank parsial atau mengubah bank aktif. Versi lama tetap disimpan agar penilaian sesi lama konsisten. Komposisi 25 dari 50 dan aturan V4 lainnya tetap berlaku.
+
+Pemilihan pasangan tidak memeriksa kesetaraan akademik: dosen perlu memastikan q1/q26 sampai q25/q50 mempunyai kompetensi dan tingkat kesulitan yang setara. Fitur ini belum menyediakan gambar/rumus matematika sebagai objek Excel, pengeditan jumlah soal, atau pergantian materi di luar komposisi awal.
 
 ## Aturan yang dipertahankan
 
@@ -88,7 +113,7 @@ Pindah tab atau kehilangan fokus selama 1 detik menghapus draf, mengganti paket,
 - `server/`: aturan ujian, bank V4, versi bank, PostgreSQL, dan CSV.
 - `api/index.mjs`: entry point Vercel Functions, memakai aplikasi Express yang sama dengan localhost.
 - `vercel.json`: direktori publik dan rewrite API/rekap.
-- `sql/001-init.sql`: skema PostgreSQL.
+- `sql/001-init.sql` dan `sql/002-exam-banks.sql`: skema PostgreSQL dan bank aktif per ujian.
 - `scripts/`: dev server, migrasi, dan PostgreSQL lokal.
 - `tests/`: bank fiktif, uji integrasi/beban/browser.
 - `sources/sites-worker.js`: salinan sumber Sites asli untuk pelacakan, tidak disajikan ke browser. Sumber Apps Script asli dipertahankan.

@@ -3,6 +3,7 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import { addProgressNavigation } from './progress-navigation.mjs';
 import { addRecapDelete } from './recap-delete.mjs';
+import { addBankManager } from './bank-manager.mjs';
 const source = fs.readFileSync('sources/sites-worker.js','utf8');
 const context = vm.createContext({});
 vm.runInContext(source.slice(0,source.indexOf('const durationMs =')) + '\nthis.assets = {html, stylesheet, client, bank: BANK_DAYA_50};',context);
@@ -31,10 +32,11 @@ js = js.slice(0,js.indexOf('function downloadRecap(')) + `async function downloa
 `;
 js = addProgressNavigation(js);
 js = addRecapDelete(js);
+js = addBankManager(js);
 const page = html.replace('data-recap="__VIEW_RECAP__"','').replace('__PAGE_TITLE__','UAS Daya Dalam Bidang Pertanian')
   .replace('<link rel="stylesheet" href="/styles.css">','<link rel="stylesheet" href="/styles.css">\n  <link rel="stylesheet" href="/password-toggle.css">')
-  .replace('<script src="/app.js" defer></script>','<script src="/password-toggle.js" defer></script>\n  <script src="/app.js" defer></script>')
-  .replace('</head>', '  <link rel="stylesheet" href="/progress-navigation.css">\n  <link rel="stylesheet" href="/recap-delete.css">\n</head>');
+  .replace('<script src="/app.js" defer></script>','<script src="/password-toggle.js" defer></script>\n  <script src="/bank-manager.js" defer></script>\n  <script src="/app.js" defer></script>')
+  .replace('</head>', '  <link rel="stylesheet" href="/progress-navigation.css">\n  <link rel="stylesheet" href="/recap-delete.css">\n  <link rel="stylesheet" href="/bank-manager.css">\n</head>');
 fs.writeFileSync('public/index.html',page+'\n');
 fs.writeFileSync('public/styles.css',stylesheet+'\n');
 fs.writeFileSync('public/app.js',js+'\n');

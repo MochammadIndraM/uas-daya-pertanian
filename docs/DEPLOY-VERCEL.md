@@ -6,7 +6,7 @@ Konfigurasi lokal sudah disiapkan. Panduan ini tidak berarti deployment sudah di
 
 1. Buka https://console.neon.tech dan buat proyek/database baru khusus aplikasi online. Pertahankan database lokal untuk localhost.
 2. Pada Neon, buka **SQL Editor** untuk database yang dipilih.
-3. Salin seluruh isi `sql/001-init.sql` dari VS Code, tempel di SQL Editor, lalu jalankan. Tabel `bank_versions`, `attempts`, dan `results` akan dibuat. Bank asli dimasukkan otomatis oleh backend saat sesi pertama berhasil dimulai.
+3. Jalankan seluruh isi `sql/001-init.sql`, lalu `sql/002-exam-banks.sql` dari VS Code melalui SQL Editor. Tabel `bank_versions`, `attempts`, `results`, dan `exam_banks` akan dibuat. Untuk database yang sudah menggunakan versi lama aplikasi, cukup jalankan `002-exam-banks.sql`; sesi/nilai yang ada tetap tersimpan. Bank awal dimasukkan otomatis oleh backend saat sesi pertama berhasil dimulai. Dosen dapat mengganti bank melalui Excel di halaman rekap setelah deployment.
 4. Klik **Connect**, aktifkan **Connection pooling**, dan salin connection string PostgreSQL lengkap dengan parameter SSL yang diberikan Neon. URL ini akan menjadi `DATABASE_URL` di Vercel. URL lokal `127.0.0.1:55432` tidak bisa digunakan oleh aplikasi Vercel.
 
 Referensi: [koneksi Neon](https://neon.com/docs/connect/connect-from-any-app).
@@ -55,6 +55,8 @@ npx.cmd vercel@latest --prod
 Perintah menampilkan URL deployment bila berhasil. Buka URL Production yang ditampilkan, dan tambahkan `/rekap` untuk dosen. Jika diminta menghubungkan folder lagi, gunakan proyek yang sama.
 
 Untuk perubahan kode berikutnya, jalankan perintah deploy yang sama. Perubahan environment di dashboard baru berlaku setelah **redeploy**; perubahan `.env` lokal tidak mengubah situs online.
+
+Pembaruan bank soal lewat fitur Excel disimpan di PostgreSQL dan langsung digunakan sesi baru, sehingga tidak memerlukan redeploy. Sesi yang sudah dimulai tetap memakai versi semula. Unduh template/soal aktif, periksa file, dan aktifkan melalui bagian **Bank soal** setelah masuk dengan kode rekap dosen. Pergantian `EXAM_ID` menggunakan bank aktif lain (atau bank bawaan bila belum pernah mengunggah).
 
 Referensi: [deploy CLI](https://vercel.com/docs/cli/deploy).
 

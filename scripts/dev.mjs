@@ -2,7 +2,7 @@ import { createPool } from '../server/db.mjs';
 import { createApp } from '../server/app.mjs';
 
 const pool = createPool(process.env.DATABASE_URL);
-try { await pool.query('SELECT 1 FROM attempts LIMIT 1'); }
+try { await pool.query('SELECT 1 FROM attempts LIMIT 1'); await pool.query('SELECT 1 FROM exam_banks LIMIT 1'); }
 catch { console.error('Database belum siap. Jalankan npm.cmd run db:local atau npm.cmd run db:migrate.'); await pool.end(); process.exit(1); }
 const app = createApp(pool, {
   examId:process.env.EXAM_ID || 'uas-daya-v4',

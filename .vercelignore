@@ -11,6 +11,7 @@ sources/
 tests/
 test-results/
 docs/
+templates/
 scripts/
 *.gs
 *.docx

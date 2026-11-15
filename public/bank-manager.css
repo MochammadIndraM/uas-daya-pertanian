@@ -1,0 +1,18 @@
+.bank-manager { margin-bottom: 18px; }
+.bank-heading { display: flex; justify-content: space-between; align-items: start; gap: 16px; flex-wrap: wrap; }
+.bank-heading p { color: var(--muted); margin: 7px 0 0; }
+.bank-info { color: var(--green); font-size: .88rem; overflow-wrap: anywhere; }
+.bank-downloads { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.bank-help { color: var(--muted); font-size: .86rem; }
+.bank-upload-form { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.bank-upload-form .field { flex: 1 1 280px; min-width: 0; }
+.bank-upload-form input[type=file] { min-width: 0; max-width: 100%; font-size: .9rem; }
+.bank-upload-form input::file-selector-button { background: var(--tint); color: var(--green); border: 0; padding: 5px 10px; border-radius: 5px; margin-right: 10px; cursor: pointer; }
+.bank-errors { color: #9b3428; font-size: .86rem; padding-left: 22px; }
+.bank-preview { background: #f6f9f4; border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-top: 16px; }
+.bank-preview h3 { margin: 0; font-size: 1.05rem; }
+.bank-preview p, #bank-preview-questions { overflow-wrap: anywhere; }
+.bank-distribution { min-width: 0; }
+.bank-distribution caption { text-align: left; color: var(--muted); font-size: .85rem; margin-bottom: 8px; }
+.bank-success { background: var(--tint); color: var(--green); border: 1px solid #b8c8bc; border-radius: 8px; padding: 12px; }
+@media (max-width: 435px) { .bank-downloads .button, .bank-upload-form > .button { width: 100%; } .bank-preview { padding: 12px; } }

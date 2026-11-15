@@ -1,5 +1,5 @@
 {
-  "dateWib": "2026-11-15 15:25:05",
+  "dateWib": "2026-11-15 18:58:30",
   "checks": [
     {
       "name": "Formulir dan aset anonim tanpa bank/kunci; rute file server ditolak",
@@ -47,14 +47,14 @@
       "results": 80,
       "unique_results": 80,
       "start": {
-        "launchWindowMs": 40.46810000000005,
-        "p95Ms": 515.6484,
-        "maxMs": 516.4088000000011
+        "launchWindowMs": 41.21169999999984,
+        "p95Ms": 510.65409999999974,
+        "maxMs": 516.5919999999969
       },
       "submit": {
-        "launchWindowMs": 27.67410000000018,
-        "p95Ms": 386.47170000000006,
-        "maxMs": 393.45800000000054
+        "launchWindowMs": 17.22769999999946,
+        "p95Ms": 458.4572999999982,
+        "maxMs": 461.3407999999981
       },
       "csvRows": 80,
       "panelRows": 80,
@@ -69,14 +69,14 @@
       "results": 80,
       "unique_results": 80,
       "start": {
-        "launchWindowMs": 25.71900000000096,
-        "p95Ms": 452.02940000000126,
-        "maxMs": 453.1273000000001
+        "launchWindowMs": 48.57690000000002,
+        "p95Ms": 425.03640000000087,
+        "maxMs": 426.6362000000008
       },
       "submit": {
-        "launchWindowMs": 23.991799999999785,
-        "p95Ms": 375.7363000000005,
-        "maxMs": 378.0971000000027
+        "launchWindowMs": 14.261900000001333,
+        "p95Ms": 282.97839999999997,
+        "maxMs": 284.6153000000013
       },
       "csvRows": 80,
       "panelRows": 80,
@@ -91,14 +91,14 @@
       "results": 80,
       "unique_results": 80,
       "start": {
-        "launchWindowMs": 55.65869999999995,
-        "p95Ms": 689.2021999999997,
-        "maxMs": 692.9752000000008
+        "launchWindowMs": 94.72090000000026,
+        "p95Ms": 704.4573999999993,
+        "maxMs": 709.7844999999943
       },
       "submit": {
-        "launchWindowMs": 23.394899999999325,
-        "p95Ms": 392.24260000000504,
-        "maxMs": 395.0155999999988
+        "launchWindowMs": 20.899699999994482,
+        "p95Ms": 328.70260000000417,
+        "maxMs": 330.69800000000396
       },
       "csvRows": 80,
       "panelRows": 80,
@@ -107,7 +107,7 @@
     }
   ],
   "status": "passed",
-  "database": "uas_test_1794731105226",
+  "database": "uas_test_1794743910359",
   "postgres": "PostgreSQL 17.7 on x86_64-windows, compiled by msvc-19.44.35219, 64-bit",
   "browser": "Chrome headless: formulir anonim, kode salah/benar, event visibility reset, reload, 25 jawaban, nilai 76, panel dan unduh CSV, viewport 390px"
 }

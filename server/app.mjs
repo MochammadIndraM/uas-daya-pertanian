@@ -16,6 +16,7 @@ export function createApp(pool, config, bank) {
     if (req.path.startsWith('/api')) res.setHeader('Cache-Control','no-store');
     next();
   });
+  app.use(['/api/bank/validate','/api/bank/upload'],express.json({limit:'2mb'}));
   app.use('/api',express.json({limit:'32kb'}));
   app.use('/api',(req,res,next) => {
     const origin = req.get('origin');
@@ -26,6 +27,10 @@ export function createApp(pool, config, bank) {
     try {
       const data = await service.rpc(action,{...req.body,...req.params});
       if (data.error) return res.status(data.status).json(data);
+      if (data.download) {
+        res.setHeader('Content-Disposition',`attachment; filename="${data.filename}"`);
+        return res.type(data.mime).send(data.download);
+      }
       if (req.path === '/api/recap.csv') {
         res.setHeader('Content-Disposition','attachment; filename="Rekap_UAS_Daya_Pertanian.csv"');
         return res.type('text/csv; charset=utf-8').send(recapCsv(data.results));
@@ -44,6 +49,7 @@ export function createApp(pool, config, bank) {
   app.post('/api/recap',execute('recap'));
   app.post('/api/recap.csv',execute('recap'));
   app.post('/api/recap/delete',execute('delete'));
+  for(const action of ['status','template','export','validate','upload']) app.post('/api/bank/'+action,execute('bank-'+action));
   app.post('/api/quiz/:action',(req,res,next) => execute(req.params.action)(req,res,next));
   app.use('/api',(req,res) => res.status(404).json({error:'Rute tidak ditemukan.',status:404}));
   app.get('/rekap',(req,res) => res.sendFile(fileURLToPath(new URL('../public/index.html',import.meta.url))));
